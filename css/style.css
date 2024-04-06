@@ -106,7 +106,7 @@ nav {
     height: 400px;
 }
 
-@media (max-width: 340px) {
+@media (max-width: 384px) {
     header {
         height: 60px;
     }
