@@ -108,7 +108,6 @@ nav {
 
 /* 모바일 화면에서 내비게이션 숨김 처리 */
 @media screen and (max-width: 768px) {
-    /* 기존에 정의된 모바일 화면용 스타일들 */
     header {
         height: 60px;
     }
@@ -123,8 +122,8 @@ nav {
         margin-right: 0;
     }
     
-    /* 내비게이션 바 숨김 처리 */
+    /* 내비게이션 바 숨김 처리, 우선순위 강제 적용 */
     nav, #topMenu {
-        display: none;
+        display: none !important;
     }
 }
