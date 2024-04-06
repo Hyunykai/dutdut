@@ -124,12 +124,12 @@ nav {
     
     /* 내비게이션 바 숨김 처리, 우선순위 강제 적용 */
     nav, #topMenu {
-        display: none !important;
+        display: none;
     }
     .rightbox {
-        display: none
+        display: none;
     }
     .leftbox {
-        display: none
+        display: none;
     }
 }
