@@ -110,7 +110,7 @@ nav {
 @media screen and (max-width: 768px) {
     header {
         height: 60px;
-        backround-color: blue;
+        background-color: blue;
     }
     .logoimg {
         height: 30px;
