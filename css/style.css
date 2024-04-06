@@ -117,7 +117,7 @@ nav {
     #logo {
         text-align: center;
     }
-    nav, #topMenu > li > ul {
+    nav, #topMenu, #topMenu > li > ul {
         display: none;
     }
     #topMenu > li {
