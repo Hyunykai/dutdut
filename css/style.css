@@ -126,4 +126,10 @@ nav {
     nav, #topMenu {
         display: none !important;
     }
+    .rightbox {
+        display: none
+    }
+    .leftbox {
+        display: none
+    }
 }
