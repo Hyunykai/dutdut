@@ -133,6 +133,27 @@ nav {
     #topMenu > li {
         margin-right: 0;
     }
+    #topMenu .loginBtn {
+        display: inline-block;
+        margin-left: 20px;
+        padding: 10px 15px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    
+    #topMenu .loginIcon {
+        vertical-align: middle; /* 이미지를 텍스트 중앙에 정렬 */
+        margin-left: 10px; /* 로그인 버튼과의 간격 */
+        width: 20px; /* 이미지 크기 조정 */
+        height: 20px;
+    }
+    
+    #topMenu .loginBtn:hover {
+        background-color: #45a049;
+    }
+    
 
     /* 내비게이션 바 숨김 처리, 우선순위 강제 적용 */
     nav, #topMenu {
