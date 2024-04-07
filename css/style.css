@@ -133,23 +133,24 @@ nav {
     #topMenu > li {
         margin-right: 0;
     }
+    .login-container {
+        text-align: right; /* 로그인 버튼을 오른쪽으로 정렬 */
+        margin: 20px; /* 상단 네비게이션 바와의 간격 */
+        background-image: url('Rectangle\ 8.png')
+    }
+    
     .loginButton {
         display: inline-block;
-        background: url('path/to/login-background.jpg') no-repeat center center; /* 배경 이미지 설정 */
-        background-size: cover; /* 배경 이미지가 버튼 크기에 맞게 조정 */
-        color: white; /* 텍스트 색상 */
-        padding: 10px 20px; /* 텍스트와 버튼 테두리 사이의 여백 */
-        text-decoration: none; /* 링크 밑줄 제거 */
-        border: none; /* 테두리 제거 */
-        cursor: pointer; /* 마우스 오버 시 커서 변경 */
+        background-color: #4CAF50; /* 배경 색상 */
+        color: white; /* 글자 색상 */
+        padding: 10px 20px; /* 내부 여백 */
+        text-decoration: none; /* 밑줄 제거 */
         border-radius: 5px; /* 모서리 둥글게 */
-        margin-left: 50px;
     }
     
     .loginButton:hover {
-        opacity: 0.8; /* 마우스 오버 시 투명도 변경 */
+        background-color: #45a049; /* 호버 시 배경 색상 */
     }
-    
     
 
     /* 내비게이션 바 숨김 처리, 우선순위 강제 적용 */
