@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입 절차</title>
+    <script type="module">
+        import { 
+          initializeApp 
+        } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js';
+        import { 
+          getAuth, 
+          createUserWithEmailAndPassword, 
+          sendEmailVerification, 
+          GoogleAuthProvider, 
+          signInWithPopup 
+        } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js';
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAnf7jMvqle6VxKiFZkdC5yVsGE-7ZWbSg",
+            authDomain: "dutdut-fa20a.firebaseapp.com",
+            projectId: "dutdut-fa20a",
+            storageBucket: "dutdut-fa20a.appspot.com",
+            messagingSenderId: "797210029917",
+            appId: "1:797210029917:web:e9b8b330a7707199d082b4",
+            measurementId: "G-Q9MY1LQQS3"
+        };
+
+        // Firebase 앱 초기화
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('nextStepBtn1').addEventListener('click', () => showStep(2));
+            document.getElementById('completeRegistrationBtn').addEventListener('click', completeRegistration);
+            document.getElementById('googleSignInBtn').addEventListener('click', signInWithGoogle);
+        });
+
+        function showStep(stepNumber) {
+            document.querySelectorAll('.step').forEach(step => {
+                step.style.display = 'none';
+            });
+            document.getElementById(`step${stepNumber}`).style.display = 'block';
+        }
+
+        async function completeRegistration() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            try {
+                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                // 이메일 인증 보내기
+                await sendEmailVerification(userCredential.user);
+                alert("인증 메일을 보냈습니다. 이메일을 확인해주세요.");
+                showStep(3); // 완료 페이지로 전환
+            } catch (error) {
+                console.error("Registration Error:", error);
+                alert(error.message);
+            }
+        }
+
+        async function signInWithGoogle() {
+            const provider = new GoogleAuthProvider();
+            try {
+                const result = await signInWithPopup(auth, provider);
+                // 구글 계정으로 로그인 성공
+                console.log(result.user);
+                showStep(3); // 완료 페이지로 바로 전환
+            } catch (error) {
+                console.error("Google Sign-In Error:", error);
+                alert(error.message);
+            }
+        }
+    </script>
+    <style>
+        .step { display: none; }
+        #step1 { display: block; }
+    </style>
+</head>
+<body>
+    <div id="step1" class="step">
+        <h2>Step 1: Account Info</h2>
+        <input type="email" id="email" placeholder="이메일"><br>
+        <input type="password" id="password" placeholder="비밀번호"><br>
+        <button id="nextStepBtn1">Next Step</button>
+        <!-- 구글 로그인 버튼 추가 -->
+        <button id="googleSignInBtn">구글로 로그인</button>
+    </div>
+
+    <div id="step2" class="step">
+        <h2>Step 2: Additional Info</h2>
+        <input type="text" id="entryNickname" placeholder="엔트리 닉네임"><br>
+        <button id="completeRegistrationBtn">Complete Registration</button>
+    </div>
+
+    <div id="step3" class="step">
+        <h2>Registration Completed</h2>
+        <p>회원가입이 완료되었습니다. 서비스를 이용해주세요.</p>
+    </div>
+</body>
+</html>
+
+
