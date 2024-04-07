@@ -72,7 +72,7 @@ nav {
     top: 100%; /* 헤더 바로 아래에 위치하도록 조정 */
     left: 0; /* 메뉴를 부모 요소와 정렬 */
     right: 0;
-    width: 100vw /* 필요에 따라 조정 */
+    width: 100vw; /* 필요에 따라 조정 */
     background-color: rgba(255,255,255);
     margin-top: 0; /* 상단 간격 제거 */
     z-index: 1000;
