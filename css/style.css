@@ -33,8 +33,20 @@ header {
     height: 35px;
     margin-right: 120px;
 }
-/* 여기까지는 예시로 포함된 기존 CSS 스타일, 필요에 따라 나머지 스타일도 여기에 포함시킬 수 있음 */
-/* 추가적인 스타일 정의가 필요한 경우 여기에 코드를 추가 */
+/* 추가된 로그인 버튼 스타일 */
+.logocont .loginButton {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: auto;
+}
+.logocont .loginButton:hover {
+    background-color: #45a049;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -63,62 +75,42 @@ nav {
 #topMenu > li > a:hover {
     color: #000;
 }
-
-/* 공통 하위 메뉴 스타일 */
-/* 공통 하위 메뉴 스타일 */
 #topMenu > li > ul {
     display: none;
     position: absolute;
-    top: 100%; /* 헤더 바로 아래에 위치하도록 조정 */
-    left: 0; /* 메뉴를 부모 요소와 정렬 */
-    width: 100%; /* 필요에 따라 조정 */
+    top: 100%;
+    left: 0;
+    width: 100%;
     background-color: rgba(255,255,255);
-    margin-top: 0; /* 상단 간격 제거 */
     z-index: 1000;
     padding: 10px 0;
-    text-align: left; /* 기본적으로 텍스트를 왼쪽 정렬 */
+    text-align: left;
 }
-/* leftbox 스타일 */
+#topMenu > li:hover > ul {
+    display: block;
+}
 #topMenu > li > ul.leftbox {
     left: 0;
-    border-left: 5px solid #7389FF; /* 왼쪽에 파란색 선 추가 */
+    border-left: 5px solid #7389FF;
     border-bottom-right-radius: 10px;
 }
-
-/* rightbox 스타일 */
 #topMenu > li > ul.rightbox {
     right: 0;
-    left: auto; /* 오른쪽 정렬을 위해 left 속성 해제 */
-    border-right: 5px solid #7389FF; /* 오른쪽에 파란색 선 추가 */
+    left: auto;
+    border-right: 5px solid #7389FF;
     border-bottom-left-radius: 10px;
-    text-align: right; /* rightbox 내 텍스트 오른쪽 정렬 */
+    text-align: right;
 }
-
-#topMenu > li:hover > ul {
-    display: block; /* 호버 시 하위 메뉴 표시 */
-}
-
 #topMenu > li > ul > li {
     padding: 10px 30px;
 }
-
 #topMenu > li > ul > li > a {
     font-size: 14px;
     color: #000;
-    display: block; /* 링크를 블록 요소로 설정하여 너비 전체에 걸쳐 정렬 가능 */
+    display: block;
 }
 
-#topMenu > li > ul.rightbox > li > a {
-    text-align: right; /* rightbox 내 텍스트 오른쪽 정렬 */
-}
-
-#slide {
-    background-color: skyblue;
-    width: 100%;
-    height: 400px;
-}
-
-/* 모바일 화면에서 내비게이션 숨김 처리 */
+/* 모바일 화면에서의 스타일 변경 */
 @media screen and (max-width: 768px) {
     header {
         height: 60px;
@@ -133,34 +125,10 @@ nav {
     #topMenu > li {
         margin-right: 0;
     }
-    .login-container {
-        text-align: right; /* 로그인 버튼을 오른쪽으로 정렬 */
-        margin: 20px; /* 상단 네비게이션 바와의 간격 */
-        background-image: url('Rectangle\ 8.png')
+    .logocont .loginButton {
+        display: none; /* 모바일에서 로그인 버튼 숨김 */
     }
-    
-    .loginButton {
-        display: inline-block;
-        background-color: #4CAF50; /* 배경 색상 */
-        color: white; /* 글자 색상 */
-        padding: 10px 20px; /* 내부 여백 */
-        text-decoration: none; /* 밑줄 제거 */
-        border-radius: 5px; /* 모서리 둥글게 */
-    }
-    
-    .loginButton:hover {
-        background-color: #45a049; /* 호버 시 배경 색상 */
-    }
-    
-
-    /* 내비게이션 바 숨김 처리, 우선순위 강제 적용 */
     nav, #topMenu {
-        display: none;
-    }
-    .rightbox {
-        display: none;
-    }
-    .leftbox {
         display: none;
     }
 }
