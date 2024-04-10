@@ -53,38 +53,40 @@ nav, #topMenu {
     padding: 20px 15px;
 }
 
+/* 하위 메뉴 스타일 */
 .sub-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     z-index: 1000;
     padding: 10px 0;
+    min-width: 160px;
+    border-radius: 4px;
 }
 
 #topMenu > li:hover .sub-menu {
     display: block;
 }
 
-.sub-menu.leftbox {
-    border-left: 5px solid #7389FF;
-    border-bottom-right-radius: 10px;
+.sub-menu > li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #f0f0f0;
 }
 
-.sub-menu.rightbox {
-    right: 0;
-    left: auto;
-    border-right: 5px solid #7389FF;
-    border-bottom-left-radius: 10px;
+.sub-menu > li:last-child {
+    border-bottom: none;
 }
 
 .sub-menu > li > a {
+    color: #333;
     display: block;
-    padding: 10px 30px;
-    color: #000;
-    text-decoration: none;
+}
+
+.sub-menu > li:hover {
+    background-color: #f0f0f0;
 }
 
 .loginButton {
@@ -101,23 +103,25 @@ nav, #topMenu {
 
 /* 모바일 화면에서의 스타일 변경 */
 @media screen and (max-width: 768px) {
-    header {
-        height: 60px;
+    .header-container {
+        flex-direction: column;
+        padding: 10px;
     }
+
     .logo img {
-        height: 30px;
-        margin-right: 0;
+        margin-bottom: 10px; /* 로고와 메뉴 사이의 간격 */
     }
-    #logo {
-        text-align: center;
-    }
-    #topMenu > li {
-        margin-right: 0;
-    }
-    .loginButton {
-        display: none;
-    }
+
     nav, #topMenu {
-        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #topMenu > li {
+        margin: 10px 0; /* 모바일 화면에서 메뉴 항목 간 간격 */
+    }
+
+    .loginButton {
+        margin-top: 10px;
     }
 }
