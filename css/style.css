@@ -166,12 +166,12 @@ nav {
     #menuTogle {
         display: block;
         position: absolute;
-        margin-top: 7px;
+        margin-top: 10px;
         right: 20px;
         cursor: pointer;
     }
     .tog {
-        height: 40px;
+        height: 35px;
     }
 }
 /* 모바일 화면에서의 스타일 변경 */
