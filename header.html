@@ -4,43 +4,28 @@
 <link rel="stylesheet" href="css/style.css"> <!--css스타일 연결-->
 </head>
 <body>
-<header>
-    <div id="logo">
-        <a href="/">
-            <img src="image/Group 18.svg" class="logoimg"/>
-        </a>
-    </div>
-    <nav>
-        <ul id="topMenu">
-            <li><a href="#">DUT²소개 <span></span></a>
-                <ul class="leftbox">
-                    <li><a href="#">둣둣 소개</a></li>
-                    <li><a href="#">오픈소스</a></li>
-                    <li><a href="#">개발자</a></li>
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo"><img src="image/Group 18.png" alt="Logo" class="logoimg"></a>
+            <nav>
+                <ul id="topMenu">
+                    <li><a href="#">메뉴1</a>
+                        <ul class="sub-menu leftbox">
+                            <li><a href="#">하위메뉴 1-1</a></li>
+                            <li><a href="#">하위메뉴 1-2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴2</a>
+                        <ul class="sub-menu rightbox">
+                            <li><a href="#">하위메뉴 2-1</a></li>
+                            <li><a href="#">하위메뉴 2-2</a></li>
+                        </ul>
+                    </li>
+                    <!-- 추가 메뉴 항목들 -->
                 </ul>
-            </li>
-            <li><a href="#">커뮤니티<span></span></a>
-                <ul class="leftbox">
-                    <li><a href="#">스토리</a></li>
-                    <li><a href="#">코드공유</a></li>
-                </ul>
-            </li>
-            <li><a href="#">홍보하기<span></span></a>
-                <ul class="rightbox">
-                    <li><a href="#">작품홍보</a></li>
-                    <li><a href="#">구인구직</a></li>
-                </ul>
-            </li>
-            <li><a href="#">검색하기<span></span></a>
-                <ul class="rightbox">
-                    <li><a href="#">유저검색</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-    <div class="logocont">
-        <a href="/login" class="loginButton">로그인</a>
-    </div>
-</header>
+            </nav>
+            <a href="/login" class="loginButton">로그인</a>
+        </div>
+    </header>
 </body>
 </html>
