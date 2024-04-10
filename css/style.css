@@ -134,6 +134,9 @@ nav {
 #menuTogle {
     display: none;
 }
+.logtext {
+    color: blue;
+}
 /*태블릿 환경*/
 @media screen and (max-width: 1300px) {
     .header-container {
