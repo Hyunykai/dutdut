@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8"> <!--메타 카세트 설정-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="google-site-verification" content="Zue7KNC9Hz8i6dUj5F7US7vOXR3IMPnfauuUIEcvKlo" /> <!--구글 노출 설정-->
-        <meta name="naver-site-verification" content="33e0563bed9f41b5f066d33feccd6146c4d5db62" /> <!--네이버 노출 설정-->
-        <link rel="icon" type="image/png" href="image/후보3.png">
-        <title>dutdut - 엔트리 유저 필수 커뮤니티</title> <!--사이트 이름 설정-->
-        <link rel="stylesheet" href="css/style.css"> <!--css스타일 연결-->
-        <script type="module" src="firebase/firebase-init.js"></script>
-    </head>
-    <body>
-        <div id="container">
-            <div id="header_hf"></div>
-            <div id="slide">
-                <p>슬라이드 제작중</p>
-
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="Zue7KNC9Hz8i6dUj5F7US7vOXR3IMPnfauuUIEcvKlo">
+    <meta name="naver-site-verification" content="33e0563bed9f41b5f066d33feccd6146c4d5db62">
+    <link rel="icon" type="image/png" href="image/후보3.png">
+    <title>dutdut - 엔트리 유저 필수 커뮤니티</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="firebase/firebase-init.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div class="header-container">
+                <a href="/" class="logo"><img src="image/logo.png" alt="Logo" class="logoimg"></a>
+                <nav>
+                    <ul id="topMenu">
+                        <li><a href="#">메뉴1</a>
+                            <ul class="sub-menu leftbox">
+                                <li><a href="#">하위메뉴 1-1</a></li>
+                                <li><a href="#">하위메뉴 1-2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">메뉴2</a>
+                            <ul class="sub-menu rightbox">
+                                <li><a href="#">하위메뉴 2-1</a></li>
+                                <li><a href="#">하위메뉴 2-2</a></li>
+                            </ul>
+                        </li>
+                        <!-- 추가 메뉴 항목들 -->
+                    </ul>
+                </nav>
+                <a href="/login" class="loginButton">로그인</a>
             </div>
-            <div id="ads">
-
-
-            </div>
-            <div id="intusers">
-
-
-            </div>
-            <div id="community">
-
-                
-            </div>
-            <div id="footer_hf"></div>
-            <script src="hf.js"></script>
+        </header>
+        <div id="slide">
+            <p>슬라이드 제작중</p>
         </div>
-    </body>
+        <div id="ads">
+            <!-- 광고 영역 -->
+        </div>
+        <div id="intusers">
+            <!-- 관심 사용자 영역 -->
+        </div>
+        <div id="community">
+            <!-- 커뮤니티 영역 -->
+        </div>
+        <div id="footer_hf"></div>
+        <script src="hf.js"></script>
+    </div>
+</body>
 </html>
