@@ -142,7 +142,7 @@ nav {
     }
 
     .logo img {
-        margin-top: 15px;
+        margin-top: 12px;
         height: 40px;
     }
 
@@ -163,7 +163,7 @@ nav {
     #menuTogle {
         display: block;
         position: absolute;
-        margin-top: 20px;
+        margin-top: 12px;
         right: 20px;
         cursor: pointer;
     }
@@ -178,7 +178,7 @@ nav {
         padding: 10px;
     }
     header {
-        height: 75px;
+        height: 70px;
     }
 
     .logo img {
