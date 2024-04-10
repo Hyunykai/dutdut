@@ -18,10 +18,43 @@
     <div id="header_hf"></div>
     <h1 class="logtext">로그인</h1>
     <div>
-        <input type="email" id="email" placeholder="Enter your email">
-        <input type="password" id="password" placeholder="Enter your password">
-        <button id="loginBtn">Login</button>
-        <button id="googleLoginBtn">Login with Google</button>
+        <form id="logform" novalidate>
+            <div id="log-input">
+                <div class="input-group">
+                    <h3 class="logInfo">이메일 입력</h3>
+                    <input type="email" id="email" name="email" placeholder="이메일 주소를 입력해주세요." required/>
+                </div>
+                <div class="input-group">
+                    <h3 class="logInfo">비밀번호 입력</h3>
+                    <input type="password" id="password" name="password" placeholder="비밀번호를 입력해주세요." required/>
+                </div>
+            </div>
+            <div class="checkbox-group">
+                <div class="logcheckbox">
+                    <input type="checkbox" id="rememberMe" name="remember"/>
+                    <label for="rememberMe">로그인 상태 유지</label>
+                </div>
+                <div class="logcheckbox">
+                    <input type="checkbox" id="autoLogin" name="autoLogin"/>
+                    <label for="autoLogin">자동 로그인</label>
+                </div>
+            </div>
+            <div class="button-group">
+                <button type="submit" id="loginBtn">DUTDUT 아이디로 로그인</button>
+                <button type="button" id="googleLoginBtn">Google로 로그인</button>
+            </div>
+            <div id="underbar">
+                <div class="uncont">
+                    <a href="/signin">
+                        <p class="under">회원가입하기 ></p>
+                    </a>
+                    <a href="#">
+                        <p class="under">비밀번호찾기 ></p>
+                    </a>
+                </div>
+            </div>
+        </form>        
+
     </div>
     <script type="module" src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
     <script type="module" src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>

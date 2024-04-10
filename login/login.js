@@ -35,3 +35,16 @@ function googleLogin() {
         alert("Google login failed: " + error.message);
     });
 }
+// 로그인 시 아이디 저장
+if (document.getElementById('rememberMe').checked) {
+    localStorage.setItem('savedId', document.getElementById('loginId').value);
+  }
+  // 페이지 로드 시 저장된 아이디 채우기
+document.addEventListener('DOMContentLoaded', function() {
+    const savedId = localStorage.getItem('savedId');
+    if (savedId) {
+      document.getElementById('loginId').value = savedId;
+      document.getElementById('rememberMe').checked = true;
+    }
+  });
+  
