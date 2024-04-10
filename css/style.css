@@ -1,10 +1,10 @@
 /* Google Fonts에서 Nanum Gothic 폰트 불러오기 */
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare/nanumsquare.css');
 
 /* 전체 페이지에 대한 기본 스타일 설정 */
 body {
-    font-family: 'Nanum Gothic', sans-serif;
-    font-weight: 400;
+    font-family: 'NanumSquare', sans-serif;
 }
 
 * {
@@ -113,12 +113,13 @@ nav {
 }
 
 .loginButton {
-    padding: 10px 20px;
+    padding: 8px 16px;
     background-color: white;
     color: black;
     border-radius: 100px;
     border: 1px solid rgb(200, 200, 200);
     text-decoration: none;
+    font-size: 10pt;
 }
 
 .loginButton:hover {
