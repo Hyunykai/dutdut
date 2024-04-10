@@ -249,7 +249,7 @@ nav {
 /* #last의 마진 오른쪽을 0으로 설정하는 대신, .under-container를 사용하여 간격 조정 */
 
 /*태블릿 환경*/
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1199px) {
     .header-container {
         flex-direction: column;
         padding: 10px;
@@ -289,7 +289,7 @@ nav {
     }
 }
 /* 모바일 화면에서의 스타일 변경 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .header-container {
         flex-direction: column;
         padding: 10px;
