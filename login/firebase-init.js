@@ -19,5 +19,4 @@ const app = initializeApp(firebaseConfig);
 // Firebase 인증 객체 생성
 const auth = getAuth(app);
 
-// 다른 파일에서 사용할 수 있도록 export
 export { auth };
