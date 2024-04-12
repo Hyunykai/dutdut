@@ -1,6 +1,6 @@
 var topMenuItems = document.querySelectorAll('#topMenu > li');
 var menuToggle = document.getElementById('menuTogle');
-var mobileMenu = document.querySelector('menuTogle');
+var mobileMenu = document.querySelector('.mobile-menu');
 
 // 상위 메뉴 항목 클릭 이벤트 리스너 설정
 topMenuItems.forEach(function(item) {
