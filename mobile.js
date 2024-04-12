@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
 
             // 하위 메뉴 토글
+            console.log(menuToggle);  // 이 코드를 통해 요소가 정상적으로 찾아졌는지 확인
             var subMenu = this.querySelector('.sub-menu');
             if (subMenu) {
-                console.log("냠냠");
                 var isDisplayed = subMenu.style.display === 'block';
                 subMenu.style.display = isDisplayed ? 'none' : 'block';
                 
@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 햄버거 메뉴 토글 로직 추가
     menuToggle.addEventListener('click', function() {
+        console.log("햄버거 메뉴 클릭!");
         // 모바일 메뉴의 표시 상태를 토글합니다.
         if (mobileMenu.style.display === 'block') {
             mobileMenu.style.display = 'none';
