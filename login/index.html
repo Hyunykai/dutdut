@@ -12,6 +12,55 @@
     <meta property="og:image" content="https://dutdut.site/image/open.png">
     <title>로그인</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js';
+        import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js';
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAnf7jMvqle6VxKiFZkdC5yVsGE-7ZWbSg",
+            authDomain: "dutdut-fa20a.firebaseapp.com",
+            projectId: "dutdut-fa20a",
+            storageBucket: "dutdut-fa20a.appspot.com",
+            messagingSenderId: "797210029917",
+            appId: "1:797210029917:web:e9b8b330a7707199d082b4",
+            measurementId: "G-Q9MY1LQQS3"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginBtn = document.getElementById('loginBtn');
+            const googleLoginBtn = document.getElementById('googleLoginBtn');
+
+            loginBtn.addEventListener('click', function(event) {
+                event.preventDefault();
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                signInWithEmailAndPassword(auth, email, password)
+                    .then((userCredential) => {
+                        console.log('Logged in:', userCredential.user);
+                        // Redirect or show logged in UI
+                    })
+                    .catch((error) => {
+                        console.error('Login error:', error);
+                    });
+            });
+
+            googleLoginBtn.addEventListener('click', function(event) {
+                event.preventDefault();
+                const provider = new GoogleAuthProvider();
+                signInWithPopup(auth, provider)
+                    .then((result) => {
+                        console.log('Google sign in:', result.user);
+                        // Redirect or show logged in UI
+                    })
+                    .catch((error) => {
+                        console.error('Google sign in error:', error);
+                    });
+            });
+        });
+    </script>
 </head>
 <body>
     <div id="header_hf"></div>
@@ -54,8 +103,6 @@
             </div>
         </form>        
     </div>
-    <script type="module" src="./firebase-init.js"></script>
-    <script type="module" src="./login.js"></script>
     <script src="https://dutdut.site/hf.js"></script>
 </body>
 </html>
