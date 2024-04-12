@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // 하위 메뉴 토글
             var subMenu = this.querySelector('.sub-menu');
             if (subMenu) {
+                console.log("냠냠");
                 var isDisplayed = subMenu.style.display === 'block';
                 subMenu.style.display = isDisplayed ? 'none' : 'block';
                 
