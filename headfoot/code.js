@@ -17,14 +17,14 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// Check auth state
-onAuthStateChanged(auth, user => {
-    const loginBtn = document.getElementById('loginBtn');
-    if (user) {
-        // User is signed in, hide the login button
-        loginBtn.style.display = 'none';
-    } else {
-        // No user is signed in, show the login button
-        loginBtn.style.display = 'block';
-    }
+document.addEventListener('DOMContentLoaded', () => {
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+        const loginButton = document.getElementById('loginBtn');
+        if (user) {
+            loginButton.classList.add('hidden'); // 로그인 상태일 때 버튼 숨기기
+        } else {
+            loginButton.classList.remove('hidden'); // 로그아웃 상태일 때 버튼 표시
+        }
+    });
 });

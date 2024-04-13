@@ -284,6 +284,9 @@ nav {
     display: block; /* 모바일 메뉴 내 로그인 버튼 표시 */
     margin: 20px; /* 상하 여백 추가 */
 }
+.hidden {
+    display: none;
+}
 
 /*태블릿 환경*/
 @media screen and (max-width: 1199px) {
