@@ -159,6 +159,9 @@ nav {
 #log-input input:hover {
     border: 2px solid rgb(200,200,200);
 }
+#log-input input:focus {
+    border: 2px solid #007BFF; /* 포커스 상태일 때 경계선 색상을 파란색으로 설정 */
+}
 .logInfo {
     position: block;
     margin-bottom: 13px;
