@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     onAuthStateChanged(auth, (user) => {
         const loginButton = document.getElementById('logbt');
         if (user) {
+            console.log("로그인상태입니다.")
             loginButton.classList.add('hidden'); // 로그인 상태일 때 버튼 숨기기
         } else {
             loginButton.classList.remove('hidden'); // 로그아웃 상태일 때 버튼 표시
