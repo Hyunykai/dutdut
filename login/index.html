@@ -40,7 +40,7 @@
                 signInWithEmailAndPassword(auth, email, password)
                     .then((userCredential) => {
                         console.log('Logged in:', userCredential.user);
-                        // Redirect or show logged in UI
+                        window.location.href = '/'; 
                     })
                     .catch((error) => {
                         console.error('Login error:', error);
@@ -53,7 +53,7 @@
                 signInWithPopup(auth, provider)
                     .then((result) => {
                         console.log('Google sign in:', result.user);
-                        // Redirect or show logged in UI
+                        window.location.href = '/'; 
                     })
                     .catch((error) => {
                         console.error('Google sign in error:', error);
