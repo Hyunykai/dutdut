@@ -287,7 +287,15 @@ nav {
 .hidden {
     display: none;
 }
-
+.new {
+    font-size: 100px;
+    color: yellow;
+    font-weight: bold;
+}
+.new2 {
+    font-size: 20px;
+    font-weight: bold;
+}
 /*태블릿 환경*/
 @media screen and (max-width: 1199px) {
     .header-container {
