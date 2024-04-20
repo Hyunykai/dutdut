@@ -39,32 +39,40 @@
         const auth = getAuth(app);
 
         document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('nextStepBtn1').addEventListener('click', () => showStep(2));
-            document.getElementById('completeRegistrationBtn').addEventListener('click', completeRegistration);
-            document.getElementById('googleSignInBtn').addEventListener('click', signInWithGoogle);
+    const nextStepBtn1 = document.getElementById('nextStepBtn1');
+    const nextStepBtn2 = document.getElementById('nextStepBtn2');
+    const agreeTerms = document.getElementById('agreeTerms');
+
+    agreeTerms.addEventListener('change', () => {
+        nextStepBtn1.disabled = !agreeTerms.checked;
+    });
+
+    nextStepBtn1.addEventListener('click', () => showStep(2));
+    nextStepBtn2.addEventListener('click', () => showStep(3));
+    document.getElementById('completeRegistrationBtn').addEventListener('click', completeRegistration);
+
+    function showStep(stepNumber) {
+        document.querySelectorAll('.step').forEach(step => {
+            step.style.display = 'none';
         });
+        document.getElementById(`step${stepNumber}`).style.display = 'block';
+    }
 
-        function showStep(stepNumber) {
-            document.querySelectorAll('.step').forEach(step => {
-                step.style.display = 'none';
-            });
-            document.getElementById(`step${stepNumber}`).style.display = 'block';
+    async function completeRegistration() {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        try {
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            await sendEmailVerification(userCredential.user);
+            alert("인증 메일을 보냈습니다. 이메일을 확인해주세요.");
+            showStep(4);
+        } catch (error) {
+            console.error("Registration Error:", error);
+            alert(error.message);
         }
+    }
+});
 
-        async function completeRegistration() {
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            try {
-                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-                // 이메일 인증 보내기
-                await sendEmailVerification(userCredential.user);
-                alert("인증 메일을 보냈습니다. 이메일을 확인해주세요.");
-                showStep(3); // 완료 페이지로 전환
-            } catch (error) {
-                console.error("Registration Error:", error);
-                alert(error.message);
-            }
-        }
 
         async function signInWithGoogle() {
             const provider = new GoogleAuthProvider();
@@ -85,25 +93,41 @@
     </style>
 </head>
 <body>
+    <div id="header_hf"></div>
     <div id="step1" class="step">
-        <h2>Step 1: Account Info</h2>
+        <h1 class="logtext">회원가입 약관 동의</h1>
+        <div id="terms">
+            <h2>서비스 이용 약관</h2>
+            <textarea readonly style="width: 100%; height: 150px;">
+    여기에 서비스 이용 약관 내용을 입력하세요...
+            </textarea>
+            <label>
+                <input type="checkbox" id="agreeTerms">
+                약관에 동의합니다.
+            </label>
+        </div>
+        <button id="nextStepBtn1" disabled>Next Step</button>
+    </div>
+    
+    <div id="step2" class="step">
+        <h1 class="logtext">회원 정보 입력</h1>
         <input type="email" id="email" placeholder="이메일"><br>
         <input type="password" id="password" placeholder="비밀번호"><br>
-        <button id="nextStepBtn1">Next Step</button>
-        <!-- 구글 로그인 버튼 추가 -->
-        <button id="googleSignInBtn">구글로 로그인</button>
+        <button id="nextStepBtn2">Next Step</button>
     </div>
-
-    <div id="step2" class="step">
-        <h2>Step 2: Additional Info</h2>
+    
+    <div id="step3" class="step">
+        <h1 class="logtext">추가 정보 입력</h1>
         <input type="text" id="entryNickname" placeholder="엔트리 닉네임"><br>
         <button id="completeRegistrationBtn">Complete Registration</button>
     </div>
-
-    <div id="step3" class="step">
+    
+    <div id="step4" class="step">
         <h2>Registration Completed</h2>
         <p>회원가입이 완료되었습니다. 서비스를 이용해주세요.</p>
     </div>
+    
+    <script src="https://dutdut.site/hf.js"></script>
 </body>
 </html>
 
