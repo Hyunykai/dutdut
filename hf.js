@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('https://dutdut.site/headfoot/header.html')
+    fetch('https://munit.site/headfoot/header.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header_hf').innerHTML = data;
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
             initializeFirebaseAuth(); // Firebase Auth 초기화 및 리스너 설정
         });
 
-    fetch('https://dutdut.site/headfoot/footer.html')
+    fetch('https://munit.site/headfoot/footer.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer_hf').innerHTML = data;
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function attachHeaderListeners() {
     var script = document.createElement('script');
-    script.src = "https://dutdut.site/mobile.js"; // 이 경로를 mobile.js의 실제 경로로 변경
+    script.src = "https://munit.site/mobile.js"; // 이 경로를 mobile.js의 실제 경로로 변경
     document.head.appendChild(script);
 }
 
