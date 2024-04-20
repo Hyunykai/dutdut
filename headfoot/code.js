@@ -4,13 +4,13 @@ import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/
 
 // Firebase configuration (프로젝트에 맞게 설정하세요)
 const firebaseConfig = {
-    apiKey: "AIzaSyAnf7jMvqle6VxKiFZkdC5yVsGE-7ZWbSg",
-    authDomain: "dutdut-fa20a.firebaseapp.com",
-    projectId: "dutdut-fa20a",
-    storageBucket: "dutdut-fa20a.appspot.com",
-    messagingSenderId: "797210029917",
-    appId: "1:797210029917:web:e9b8b330a7707199d082b4",
-    measurementId: "G-Q9MY1LQQS3"
+    apiKey: "AIzaSyDTY21l_Q_1BbvU8DNU1CYsXbUdJk9hHEw",
+    authDomain: "co-munit.firebaseapp.com",
+    projectId: "co-munit",
+    storageBucket: "co-munit.appspot.com",
+    messagingSenderId: "960543617483",
+    appId: "1:960543617483:web:e629fdb99b17dd2992c64e",
+    measurementId: "G-G36BX3PG00"
 };
 
 // Initialize Firebase
