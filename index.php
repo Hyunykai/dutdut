@@ -16,7 +16,7 @@
     </head>
     <body>
         <div id="container">
-            <div id="header_hf"></div>
+        <?php include '../headfoot/header.php'; ?>
             <div id="slide">
                 <p class="new">새로운 이름, 새로운 디자인으로 찾아뵙겠습니다.</p>
                 <p class="new2">더욱 더 많은 엔트리 확장기능, 엔트리와 관계없는 독립형 웹앱!</p>
@@ -33,8 +33,7 @@
 
                 
             </div>
-            <div id="footer_hf"></div>
-            <script src="hf.js"></script>
+            <?php include '../headfoot/footer.php'; ?>
         </div>
     </body>
 </html>

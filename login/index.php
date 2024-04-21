@@ -63,7 +63,7 @@
     </script>
 </head>
 <body>
-    <div id="header_hf"></div>
+<?php include '../headfoot/header.php'; ?>
     <h1 class="logtext">로그인</h1>
     <div>
         <form id="logform" novalidate>

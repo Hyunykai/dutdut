@@ -93,7 +93,7 @@
     </style>
 </head>
 <body>
-    <div id="header_hf"></div>
+<?php include '../headfoot/header.php'; ?>
     <div id="step1" class="step">
         <h1 class="logtext">회원가입 약관 동의</h1>
         <div id="terms">
