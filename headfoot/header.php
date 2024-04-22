@@ -17,7 +17,13 @@
                     </li>
                 </ul>
             </nav>
-            <a href="/login" class="loginButton" id="logbt">로그인</a>
+            <a class="loginButton" id="logbt">로그인</a>
+            <script>
+        document.getElementById('logbt').addEventListener('click', function() {
+            alert('munit은 아직 제작중으로, 로그인 페이지가 매우 불안정합니다. 그래도 이동하시겠습니까? (개발자용)');
+            window.location.href = '/login'; // 이동하고 싶은 URL로 수정하세요
+        });
+            </script>
             <div id="menuTogle">
                 <img class="tog" src="https://munit.me/image/hamburger.svg">
             </div>

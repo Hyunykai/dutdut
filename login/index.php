@@ -88,7 +88,7 @@
                 </div>
             </div>
             <div class="button-group">
-                <button type="submit" id="loginBtn">DUTDUT 아이디로 로그인</button>
+                <button type="submit" id="loginBtn">MUNIT 아이디로 로그인</button>
                 <button type="button" id="googleLoginBtn">Google로 로그인</button>
             </div>
             <div id="underbar">
