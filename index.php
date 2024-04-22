@@ -22,7 +22,7 @@
                 <p class="chanint" id="txa">즐거운</p>
                 <script src="txtani.js"></script>
                 <p>커뮤니티</p>
-                <p class="comsoon">과연 어떤 모습으로 출시할까요- COMING SOON</p>
+                <p class="comsoon">과연 어떤 모습으로 출시할까요- COMING SOON!</p>
             </div>
         <?php include 'headfoot/footer.php'; ?>
         </div>
