@@ -321,6 +321,9 @@ nav {
     from, to { border-color: transparent }
     50% { border-color: black }
 }
+#maindesign {
+  display: absolute;
+}
 /*태블릿 환경*/
 @media screen and (max-width: 1199px) {
     .header-container {
