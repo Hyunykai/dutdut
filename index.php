@@ -16,14 +16,14 @@
     </head>
     <body>
         <div id="container">
-        <?php include '../headfoot/header.php'; ?>
+        <?php include 'headfoot/header.php'; ?>
             <div id="intro">
                 <p>더욱</p>
                 <p class="chanint">즐거운</p>
                 <p>커뮤니티</p>
                 <p class="comsoon">과연 어떤 모습으로 출시할까요- COMING SOON</p>
             </div>
-        <?php include '../headfoot/footer.php'; ?>
+        <?php include 'headfoot/footer.php'; ?>
         </div>
     </body>
 </html>
