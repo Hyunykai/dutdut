@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const phrases = ["즐거운", "안전한", "새로운", "편리한"];
     let currentPhraseIndex = 0;
     let charIndex = 0;
-    let p = document.getElementById('animatedText');
+    let p = document.getElementById('txa');
     let direction = 'backward';
 
     function updateText() {

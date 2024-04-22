@@ -19,7 +19,8 @@
         <?php include 'headfoot/header.php'; ?>
             <div id="intro">
                 <p>더욱</p>
-                <p class="chanint">즐거운</p>
+                <p class="chanint" id="txa">즐거운</p>
+                <script src="txtani.js"></script>
                 <p>커뮤니티</p>
                 <p class="comsoon">과연 어떤 모습으로 출시할까요- COMING SOON</p>
             </div>
