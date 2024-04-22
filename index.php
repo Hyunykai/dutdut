@@ -17,23 +17,13 @@
     <body>
         <div id="container">
         <?php include '../headfoot/header.php'; ?>
-            <div id="slide">
-                <p class="new">새로운 이름, 새로운 디자인으로 찾아뵙겠습니다.</p>
-                <p class="new2">더욱 더 많은 엔트리 확장기능, 엔트리와 관계없는 독립형 웹앱!</p>
+            <div id="intro">
+                <p>더욱</p>
+                <p class="chanint">즐거운</p>
+                <p>커뮤니티</p>
+                <p class="comsoon">과연 어떤 모습으로 출시할까요- COMING SOON</p>
             </div>
-            <div id="ads">
-
-
-            </div>
-            <div id="intusers">
-
-
-            </div>
-            <div id="community">
-
-                
-            </div>
-            <?php include '../headfoot/footer.php'; ?>
+        <?php include '../headfoot/footer.php'; ?>
         </div>
     </body>
 </html>
