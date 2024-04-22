@@ -400,5 +400,8 @@ nav {
     .tog {
         height: 32px;
     }
+    .comsoon {
+        display: none;
+    }
 }
 

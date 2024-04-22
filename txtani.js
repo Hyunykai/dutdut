@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function updateText() {
         if (direction === 'backward') {
-            if (charIndex > 0) {
+            if (charIndex > 1) {
                 charIndex--;
-                p.textContent = phrases[currentPhraseIndex].slice(0, charIndex);
+                p.textContent = phrases[currentPhraseIndex].slice(0, charIndex) + "|";
             } else {
                 direction = 'forward';
                 currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             if (charIndex < phrases[currentPhraseIndex].length) {
                 charIndex++;
-                p.textContent = phrases[currentPhraseIndex].slice(0, charIndex);
+                p.textContent = phrases[currentPhraseIndex].slice(0, charIndex) + "|";
             } else {
                 direction = 'backward';
                 setTimeout(updateText, 3000); 
