@@ -293,7 +293,7 @@ nav {
     justify-content: center;
     align-items: left;
     height: calc(100vh - 85px); /* 뷰포트 높이에서 헤더의 높이를 빼줍니다 */
-    font-size: 50px;
+    font-size: 6vh;
     margin-left: 25px;
     font-weight: bold;
     white-space: nowrap;
@@ -305,7 +305,7 @@ nav {
 .comsoon {
     margin-top: 25px;
     color: rgb(90, 90, 90);
-    font-size: 22px;
+    font-size: 2.5vh;
 }
 #txa {
     display: inline; 
