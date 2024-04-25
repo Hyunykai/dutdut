@@ -23,8 +23,18 @@
                 <p class="chanint" id="txa">○○○</p>
                 <script src="txtani.js"></script>
                 <p>커뮤니티</p>
-                <p class="comsoon">과연 어떤 모습으로 출시할까요- COMING SOON!</p>
             </div>
+            <div id="mainsq"></div>
+        </div>
+        <div id="getstart">
+            <h2 class="hello">뮤닛의 세계로 빠져보세요!</h2>
+            <br>
+            <a href="/login" id="start">
+                <input type="button" id="stbt" value="지금 시작하기" />
+            </a>
+        </div>
+        <div id="info1">
+            
         </div>
         <?php include 'headfoot/footer.php'; ?>
         </div>

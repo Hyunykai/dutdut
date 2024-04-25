@@ -30,6 +30,25 @@ a {
 }
 header {
     border-bottom: 2px solid rgb(200,200,200);
+    position: relative;
+    z-index: 100;
+}
+.footer-container {
+    display: flex;
+    align-items: center;
+    height: 220px;
+    width: 100%;
+    max-width: 1062px;
+    margin: 0 auto;
+    padding: 0 20px;
+    justify-content: center;
+}
+footer {
+    background-color: #ededed;
+    border-top: 2px solid rgb(171, 171, 171);
+}
+.logoimgfoot {
+    height: 25px;
 }
 
 .logo img {
@@ -289,15 +308,53 @@ nav {
 }
 #intro {
     display: flex;
-    flex-direction: column; /* Flexbox 방향을 세로로 설정 */
-    justify-content: center;
-    align-items: left;
-    height: calc(100vh - 85px); /* 뷰포트 높이에서 헤더의 높이를 빼줍니다 */
-    font-size: 50px; /*6vh*/
-    margin-left: 25px;
+    flex-direction: column;
+    justify-content: center; 
+    height: calc(100vh - 85px); 
+    margin-left: 50px; 
+    text-align: left;
+    font-size: 50px;
     font-weight: bold;
-    white-space: nowrap;
-    overflow: hidden;
+}
+#box {
+    position: relative;
+    display: flex;
+    overflow: hidden; /* 필요에 따라 조정 */
+}
+
+
+#getstart {
+    display: flex;
+    flex-direction: column; /* 자식 요소를 수직 방향으로 정렬 */
+    justify-content: center; /* 수직 방향으로 가운데 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    position: absolute; /* 페이지 내에서 절대 위치 */
+    top: 85px;
+    right: 0; 
+    width: 50%; 
+    height: calc(100% - 85px); 
+    background-color: #ffe3f9;
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%); 
+    z-index: 1;
+    font-size: 18px;
+    color: rgb(97, 97, 97);
+    font-weight: bold;
+}
+.hello {
+    margin-left: 20%;
+}
+#start {
+    margin-left: 20%;
+}
+#stbt {
+    border: 0;
+    height: 40px;
+    padding: 10px 40px 10px 40px;
+    background-color: rgb(255,90,255);
+    border-radius: 100px;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
 }
 .chanint {
     color: rgb(255, 90, 255);
@@ -322,9 +379,60 @@ nav {
     from, to { border-color: transparent }
     50% { border-color: black }
 }
-#maindesign {
-  display: absolute;
+#info1 {
+    width: 100%;
+    height: 80vh;
 }
+.footcont {
+    display: flex;
+    flex-direction: column; /* 방향을 수직으로 설정 */
+    height: auto; /* 높이 자동 조정 */
+    margin-left: 100px;
+}
+
+#footmenu {
+    display: flex;
+    justify-content: center; /* 가운데 정렬 */
+    list-style: none;
+    padding: 0;
+    margin-right: 50px;
+    text-align: left;
+}
+
+.munitmail {
+    width: 100%;
+    margin-top: 10px; /* 상단 여백 추가 */
+}
+.forinfo {
+    width: 100%;
+    margin-top: 2px;
+}
+.logoplace {
+    display: flex;
+    width: 200px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+#footmenu > li {
+    position: relative;
+}
+
+#footmenu > li:last-child {
+    margin-right: 0;
+}
+
+#footmenu > li > a {
+    display: block;
+    color: #000;
+    font-weight: 600;
+    margin-right: 80px;
+}
+
+#footmenu > li > a:hover {
+    color: #000;
+}
+
 /*태블릿 환경*/
 @media screen and (max-width: 1199px) {
     .header-container {
@@ -407,5 +515,50 @@ nav {
     .comsoon {
         display: none;
     }
+    .footer-container {
+        flex-direction: column; /* 컨테이너의 방향을 수직으로 변경 */
+        align-items: center; /* 요소들을 중앙 정렬 */
+    }
+
+    .logoplace {
+        width: 100%; /* 로고를 컨테이너 너비에 맞춤 */
+        justify-content: center; /* 로고를 중앙 정렬 */
+        height: 85px;
+    }
+
+    #footmenu {
+        flex-direction: row; /* 내비게이션 메뉴를 수평 방향으로 설정 */
+        justify-content: center; 
+        margin-top: 10px; /* 로고와의 간격 설정 */
+        margin-right: 0; /* 오른쪽 마진 제거 */
+        margin-left: 0;
+    }
+
+    #footmenu > li {
+        margin-right: 20px; /* 버튼 간의 간격 조절 */
+    }
+
+    #footmenu > li:last-child {
+        margin-right: 0; /* 마지막 항목의 오른쪽 마진 제거 */
+    }
+    .munitmail {
+        text-align: center;
+    }
+    .forinfo {
+        text-align: center;
+    }
+    .footcont {
+        margin-left: 0;
+    }
+    #footmenu > li > a {
+        margin-right: 40px;
+    }
+    #footmenu > li > a:last-child {
+        margin-right: 0;
+    }
+    #getstart {
+        clip-path: triangle(100% 0, 100% 100%, 0 100%); 
+    }
+}
 }
 
